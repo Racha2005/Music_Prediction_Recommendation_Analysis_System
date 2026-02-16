@@ -224,5 +224,3 @@ UMAP, KMeans
 This project is released under the MIT License and can be used, modified, or redistributed with proper credit.
 
 ---
-
-
