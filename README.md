@@ -1,86 +1,31 @@
+<<<<<<< HEAD
 # 🎵 Music Prediction & Recommendation Analysis System 🎵
+=======
+# **"Music Prediction and Recommendation System"**
+>>>>>>> fb91fbd (Clean streamlit dashboard fix)
 
-<p align="center">
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032248.png" width="750">
-</p>
+This project is a complete, end-to-end music intelligence system combining data analytics, professional data visualization, machine-learning predictions, and an interactive recommendation engine.  
+It includes two interfaces — a **Streamlit Dashboard** and a **Tkinter Desktop Application** — both styled with a modern theme to provide a clean and engaging visual experience.
 
----
+The goal of this project is to demonstrate how raw music data can be transformed into meaningful insights and user-facing tools using data science.
 
-### ▶ Run the Streamlit Dashboard
-```bash
-streamlit run music_app/app_streamlit/streamlit_dashboard_dark.py
-```
 
-<p align="center">
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032340.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032309.png" width="750">
-</p>
 
----
+## **Overview**
 
-### ▶ Run Desktop Demo
-```bash
-python -m music_app.app_desktop.desktop_app
-```
+This project focuses on understanding the hidden patterns within music datasets and creating tools that help users:
 
-# or
-```bash
-python music_app/app_desktop/desktop_app.py
-```
+- Visualize and explore music characteristics  
+- Understand trends in genres, mood, energy, and popularity  
+- Predict important attributes such as track popularity  
+- Receive song recommendations based on similarity  
+- Uses data analytics in both web and desktop environments  
 
-<p align="center">
-  <img src="images/desktop app/Screenshot 2025-11-22 034012.png" width="750">
-</p>
+The entire system is built to be simple to use, while still being technically rich, making it ideal for students, researchers, and data science enthusiasts.
 
----
 
-### ▶ Train ML Models
-```bash
-python -m music_app.ml.train_popularity
-python -m music_app.ml.train_mood
-```
 
-<p align="center">
-  <img src="images/data cleaning/Screenshot 2025-11-26 002621.png" width="750"><br>
-  <img src="images/data cleaning/Screenshot 2025-11-26 002435.png" width="750">
-</p>
-
----
-
-## 🎧 MUSIC PREDICTION AND RECOMMENDATION SYSTEM
-
-A complete end-to-end **Music Intelligence System** featuring:
-
-- 🌐 Streamlit Analytics Dashboard
-- 💻 Tkinter Desktop App
-- 🤖 Popularity & Mood ML Models
-- 🎧 Audio Feature Extraction
-- 🖼️ Image Hashing
-- 📝 Lyrics Sentiment Analysis
-- 🔍 UMAP + KMeans Clustering
-- 🎼 Content-Based Recommendation Engine
-- 🌙 Dark Neon Theme
-
-Transforms data → insights → predictions → recommendations.
-
----
-
-## ⭐ OVERVIEW
-
-Helps users:
-
-- Analyze music trends
-- Predict popularity
-- Understand mood & energy
-- Explore genre distributions
-- Use BI-style dashboards
-- Get smart recommendations
-- Analyze audio, images, lyrics
-- Use both web & desktop apps
-
----
-
-## 📁 FOLDER STRUCTURE
+## **Folder Structure**
 
 ```
 music_prediction_recommendation_analysis_project/
@@ -90,38 +35,24 @@ music_prediction_recommendation_analysis_project/
 ├── requirements.txt
 │
 ├── data/
-│   ├── music_dataset_500.csv
-│   ├── audio_features.csv
-│   ├── image_hashes.csv
-│   ├── lyrics_analysis.csv
-│   ├── clusters.csv
-│   ├── covers/
-│   └── audio/
+│   └── music_dataset_500.csv
 │
 └── music_app/
     ├── config.py
     ├── cli.py
     │
-    ├── models/
-    │   ├── popularity_rf.joblib
-    │   └── mood_rf.joblib
-    │
     ├── ml/
     │   ├── train_popularity.py
     │   ├── train_mood.py
-    │   └── recommender.py
+    │   ├── recommender.py
     │
-    ├── extras/
-    │   ├── audio_features.py
-    │   ├── image_hashing.py
-    │   ├── lyrics_analysis.py
-    │   ├── clustering.py
-    │   ├── recommenders.py
-    │   ├── organize_music.py
-    │   └── voice_commands.py
+    ├── data_analysis/
+    │   ├── eda_report.py
+    │   └── trends.py
     │
     ├── app_streamlit/
-    │   └── streamlit_dashboard_dark.py
+    │   ├── streamlit_dashboard_dark.py
+    │   └── streamlit_app.py
     │
     ├── app_desktop/
     │   └── desktop_app.py
@@ -132,82 +63,76 @@ music_prediction_recommendation_analysis_project/
             └── index.html
 ```
 
----
 
-## 🚀 RUN COMMANDS
 
-### Activate Virtual Environment
-```bash
-.\venv\Scripts\Activate.ps1
+## **Run Commands**
+
+### **Activate Virtual Environment**
+```
+.\.venv\Scripts\Activate.ps1
 ```
 
-### Run Streamlit Dashboard
-```bash
+### **Run Streamlit Dashboard**
+```
 streamlit run music_app/app_streamlit/streamlit_dashboard_dark.py
 ```
 
-### Run Desktop App
-```bash
+### **Run Desktop Application**
+```
 python music_app/app_desktop/desktop_app.py
 ```
 
-### Train Models
-```bash
+### **Train Popularity Model**
+```
 python -m music_app.ml.train_popularity
+```
+
+### **Train Mood Classification Model**
+```
 python -m music_app.ml.train_mood
 ```
 
 ---
 
-## 📊 FEATURES
+## **What This Project Includes**
 
-### Streamlit Dashboard
+### **1. Streamlit Dashboard**
+The Streamlit dashboard acts as a complete analytics and recommendation platform. It contains:
 
-<p align="center">
-  <img src="images/streamlit dashboard/Screenshot 2025-11-26 004111.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-26 014127.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032731.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032644.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032606.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032548.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032532.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032454.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032446.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 032606.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 003957.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 004006.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 004018.png" width="750"><br>
-  <img src="images/streamlit dashboard/Screenshot 2025-11-22 004025.png" width="750">
-</p>
+#### **Interactive KPI Cards**
+Summarizes essential insights like:
+- Total tracks  
+- Average popularity  
+- Top genre  
+- Average duration  
+- Number of artists  
 
-- KPI cards
-- Genre stats (bar + donut)
-- Popularity vs tempo
-- Mood pie chart
-- Energy histogram
-- Filters
-- Recommendation table
-- Image hashing viewer
-- Audio feature table
-- Sentiment table
-- Clustering graphs
+#### **Genre Distribution Analysis**
+- Which genres dominate the dataset  
+- Filterable visualizations  
+- Donut and bar charts  
 
----
+#### **Popularity & Mood Trends**
+Shows:
+- Popularity variations  
+- Mood distribution by energy + valence  
 
-### Desktop App
+#### **Energy & Acoustic Insights**
+Displays:
+- Energy levels  
+- Acousticness patterns  
 
-<p align="center">
-  <img src="images/desktop app/Screenshot 2025-11-26 014413.png" width="750"><br>
-  <img src="images/desktop app/Screenshot 2025-11-26 014547.png" width="750"><br>
-  <img src="images/desktop app/Screenshot 2025-11-26 014643.png" width="750"><br>
-  <img src="images/desktop app/Screenshot 2025-11-26 015038.png" width="750">
-</p>
+#### **BI-Style White-Background Charts**
+Charts placed inside white containers for professional dashboard styling.
 
-- Top tracks view
-- Genre charts
-- Recommendations popup
-- Import audio option
+#### **Explorer Filters**
+Users can filter by:
+- Genre  
+- Artist  
+- Popularity level  
+- Track duration  
 
+<<<<<<< HEAD
 ---
 
 ## 📦 TECHNOLOGIES
@@ -224,3 +149,184 @@ UMAP, KMeans
 This project is released under the MIT License and can be used, modified, or redistributed with proper credit.
 
 ---
+=======
+#### **Recommendation Panel**
+The content-based recommender suggests similar tracks using:
+- Genre  
+- Energy  
+- Danceability  
+- Acousticness  
+- Valence  
+- Popularity difference  
+
+
+
+### **2. Tkinter Desktop Application**
+
+#### **Top Tracks Viewer**
+Displays:
+- Track ID  
+- Title  
+- Genre  
+- Popularity  
+
+#### **Genre Distribution Chart**
+A Matplotlib-based chart embedded inside Tkinter.
+
+#### **Recommendation Popup Window**
+Displays similar tracks by:
+- Title  
+- Genre  
+- Popularity score  
+
+#### **UI Aesthetic**
+- Dark backgrounds  
+- Cyan text  
+- Clean layout  
+
+
+
+### **3. Machine Learning Components**
+
+#### **Popularity Prediction**
+- Model: RandomForestRegressor  
+- Predicts future popularity  
+- Useful for understanding trending potential  
+
+#### **Mood Classification**
+Uses:
+- Energy  
+- Valence  
+- Acousticness  
+- Danceability  
+
+Outputs:
+- Positive  
+- Calm / Neutral  
+
+#### **Content-Based Recommender**
+Scores similarity using:
+- Genre match  
+- Popularity difference  
+- Feature similarity  
+  - Energy  
+  - Valence  
+  - Danceability  
+  - Acousticness  
+
+
+
+## **Packages Used**
+
+### **Core Libraries**
+- pandas  
+- numpy  
+- matplotlib  
+- plotly  
+- streamlit  
+- tkinter  
+
+### **Machine Learning**
+- scikit-learn  
+- joblib  
+
+### **Supporting Tools**
+- pathlib  
+- os  
+- Pillow (PIL)  
+- seaborn *(optional)*  
+
+These enable integrated analytics, ML, visualization, and UI workflows.
+
+
+
+## **Dataset Details**
+
+The dataset contains **500 tracks** with:
+
+### **Acoustic Features**
+- Acousticness  
+- Energy  
+- Danceability  
+- Valence  
+- Tempo  
+- Loudness  
+- Instrumentalness  
+
+### **Metadata**
+- Genre  
+- Artist  
+- Track ID  
+- Song title  
+
+### **Popularity Metrics**
+- Popularity score (0–100)
+
+The dataset is clean, structured, and ideal for analytics and ML.
+
+
+
+## **Purpose of the Project**
+
+This project demonstrates a full real-world workflow:
+
+1. **Data Collection**  
+2. **Cleaning & Preprocessing**  
+3. **Visualization**  
+4. **Machine Learning**  
+5. **Recommendation Engine**  
+6. **Dashboard + Desktop Deployment**  
+
+Perfect for:
+- Academic submissions  
+- Portfolio projects  
+- Internship technical tasks  
+- Learning ML + visualization  
+
+
+
+## **Additional Information**
+
+### **Dark Theme Justification**
+Chosen to:
+- Improve visual contrast  
+- Highlight BI charts  
+- Provide a modern dashboard appearance  
+
+### **Streamlit + Tkinter Combination**
+- Streamlit → deep, interactive analytics  
+- Tkinter → quick, offline-friendly UI  
+
+### **Recommendation System Logic**
+Similarity Score:
+```
+Genre Match Weight 
+− Popularity Difference 
+− Feature Distance (Energy, Valence, Danceability, Acousticness)
+```
+
+### **ML Benefits**
+- Predicts potential hit tracks  
+- Groups songs by mood  
+- Enhances recommendation accuracy  
+
+
+
+## **Key Outcomes**
+
+- Fully functional music analytics dashboard  
+- Tkinter desktop tool for offline usage  
+- Trained ML models  
+- Data-driven recommendations  
+- Modern UI design  
+- Easy-to-understand visual reports  
+- End-to-end practical implementation  
+
+
+
+## **Summary**
+
+This project provides a complete music analysis ecosystem.  
+Users can explore track trends, visualize characteristics, predict popularity, analyze mood and energy, and receive intelligent recommendations.  
+It is professional, modern, interactive, and perfect for academic or portfolio use.
+>>>>>>> fb91fbd (Clean streamlit dashboard fix)

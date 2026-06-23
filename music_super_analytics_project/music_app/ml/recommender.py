@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 
-BASE = os.path.join(os.path.dirname(__file__), "..", "..", "data")
+BASE = os.path.join(os.path.dirname(__file__), "..", "data")
 df = pd.read_csv(os.path.join(BASE, "music_dataset_500.csv"))
 
 def recommend(seed_track_id, top_k=10):
