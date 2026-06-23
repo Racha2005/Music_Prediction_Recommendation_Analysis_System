@@ -1,4 +1,4 @@
-# 🎵 Music Prediction & Recommendation Analysis Project 🎵
+# 🎵 Music Prediction & Recommendation System 🎵
 
 <p align="center">
   <img src="images/streamlit dashboard/Screenshot 2025-11-22 032248.png" width="750">
