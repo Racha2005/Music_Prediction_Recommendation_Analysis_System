@@ -52,9 +52,9 @@ st.markdown("""
 #       BANNERS
 # ---------------------------
 banners = [
-    "/mnt/data/a86fe0fa-cbb8-46e4-9899-bfc773eb081f.png",
-    "/mnt/data/e2cac4a1-3508-48cb-bb5b-c751c6631adc.png",
-    "/mnt/data/0b630ca9-0743-4fb8-8dca-92e21fb1e59e.png",
+    os.path.join(ASSETS_DIR, "song1.jpg"),
+    os.path.join(ASSETS_DIR, "song2.jpg"),
+    os.path.join(ASSETS_DIR, "song3.jpg"),
 ]
 
 cols = st.columns(3)
@@ -331,7 +331,11 @@ with tab2:
         # SELECTED IMAGE
         selected = st.selectbox("Select artwork", df_hash["file"].tolist())
 
-        img1 = Image.open(selected)
+        if os.path.exists(selected):
+            img1 = Image.open(selected)
+        else:
+            st.warning(f"Image not found: {selected}")
+            img1 = None
 
         hash1 = df_hash[df_hash["file"] == selected]["hash"].iloc[0]
 
