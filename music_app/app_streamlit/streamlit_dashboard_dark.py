@@ -7,7 +7,6 @@ import os
 =======
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASSETS_DIR = os.path.join(BASE_DIR, "..", "assets")
->>>>>>> 23a9cc4dfe6aaa3daeba67fe0d7e50a70e11569b
 import imagehash
 
 # ---------------------------
