@@ -1,6 +1,6 @@
 # 🎵 Music Prediction & Recommendation Analysis System 🎵
 
-
+[![Deployed to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Racha2005/Music_Prediction_Recommendation_Analysis_System)
 
 🌎 **Live Web Dashboard:** [https://music-prediction-and-recommendation-analysis-system.streamlit.app/](https://music-prediction-and-recommendation-analysis-system.streamlit.app/)
 
