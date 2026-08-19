@@ -5,6 +5,8 @@ from PIL import Image
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 ASSETS_DIR = os.path.join(BASE_DIR, "..", "assets")
+DATA_DIR = os.path.abspath(os.path.join(BASE_DIR, "..", "..", "data"))
+REPO_ROOT = os.path.abspath(os.path.join(DATA_DIR, ".."))
 import imagehash
 
 # ---------------------------
@@ -60,7 +62,7 @@ banners = [
 cols = st.columns(3)
 for c, img in zip(cols, banners):
     try:
-        c.image(Image.open(img), use_column_width=True)
+        c.image(Image.open(img), use_container_width=True)
     except:
         pass
 
@@ -292,8 +294,9 @@ tab1, tab2, tab3, tab4 = st.tabs(["Audio Features", "Image Hashing", "Lyrics Ana
 # AUDIO FEATURES TAB
 with tab1:
     st.header("Audio Feature Explorer")
-    if os.path.exists("data/audio_features.csv"):
-        st.dataframe(pd.read_csv("data/audio_features.csv"))
+    audio_features_path = os.path.join(DATA_DIR, "audio_features.csv")
+    if os.path.exists(audio_features_path):
+        st.dataframe(pd.read_csv(audio_features_path))
     else:
         st.info("Run audio_features.py to generate audio_features.csv")
 
@@ -302,8 +305,11 @@ with tab1:
 with tab2:
     st.header("Album Artwork Similarity")
 
-    if os.path.exists("data/image_hashes.csv"):
-        df_hash = pd.read_csv("data/image_hashes.csv")
+    image_hashes_path = os.path.join(DATA_DIR, "image_hashes.csv")
+    if os.path.exists(image_hashes_path):
+        df_hash = pd.read_csv(image_hashes_path)
+        # Normalize backslashes to forward slashes for Linux compatibility
+        df_hash["file"] = df_hash["file"].str.replace("\\", "/", regex=False)
 
         st.subheader("Hash Table")
         st.dataframe(df_hash)
@@ -315,7 +321,7 @@ with tab2:
         grid_cols = st.columns(3)
         index = 0
         for _, row in df_hash.iterrows():
-            img_path = row["file"]
+            img_path = os.path.abspath(os.path.join(REPO_ROOT, row["file"]))
             if os.path.exists(img_path):
                 try:
                     img = Image.open(img_path)
@@ -330,11 +336,12 @@ with tab2:
 
         # SELECTED IMAGE
         selected = st.selectbox("Select artwork", df_hash["file"].tolist())
+        selected_abs = os.path.abspath(os.path.join(REPO_ROOT, selected))
 
-        if os.path.exists(selected):
-            img1 = Image.open(selected)
+        if os.path.exists(selected_abs):
+            img1 = Image.open(selected_abs)
         else:
-            st.warning(f"Image not found: {selected}")
+            st.warning(f"Image not found: {selected_abs}")
             img1 = None
 
         hash1 = df_hash[df_hash["file"] == selected]["hash"].iloc[0]
@@ -377,8 +384,9 @@ with tab2:
 # LYRICS TAB
 with tab3:
     st.header("Lyrics Analysis")
-    if os.path.exists("data/lyrics_analysis.csv"):
-        st.dataframe(pd.read_csv("data/lyrics_analysis.csv"))
+    lyrics_analysis_path = os.path.join(DATA_DIR, "lyrics_analysis.csv")
+    if os.path.exists(lyrics_analysis_path):
+        st.dataframe(pd.read_csv(lyrics_analysis_path))
     else:
         st.info("Run lyrics_analysis.py to generate lyrics_analysis.csv")
 
@@ -386,7 +394,8 @@ with tab3:
 # CLUSTERING TAB
 with tab4:
     st.header("Song Clusters (UMAP + KMeans)")
-    if os.path.exists("data/clusters.csv"):
-        st.dataframe(pd.read_csv("data/clusters.csv"))
+    clusters_path = os.path.join(DATA_DIR, "clusters.csv")
+    if os.path.exists(clusters_path):
+        st.dataframe(pd.read_csv(clusters_path))
     else:
         st.info("Run clustering.py to generate clusters.csv")

@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: music-recommendation-dashboard
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run music_app/app_streamlit/streamlit_dashboard_dark.py --server.port $PORT --server.address 0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 # 🎵 Music Prediction & Recommendation Analysis System 🎵
-=======
-# **"Music Prediction and Recommendation System"**
->>>>>>> fb91fbd (Clean streamlit dashboard fix)
 
 This project is a complete, end-to-end music intelligence system combining data analytics, professional data visualization, machine-learning predictions, and an interactive recommendation engine.  
 It includes two interfaces — a **Streamlit Dashboard** and a **Tkinter Desktop Application** — both styled with a modern theme to provide a clean and engaging visual experience.
@@ -132,24 +128,6 @@ Users can filter by:
 - Popularity level  
 - Track duration  
 
-<<<<<<< HEAD
----
-
-## 📦 TECHNOLOGIES
-
-Python, Streamlit, Tkinter  
-pandas, numpy, scikit-learn, joblib  
-librosa, nltk, pillow, imagehash  
-UMAP, KMeans  
-
----
-
-## 📄 MIT LICENSE
-
-This project is released under the MIT License and can be used, modified, or redistributed with proper credit.
-
----
-=======
 #### **Recommendation Panel**
 The content-based recommender suggests similar tracks using:
 - Genre  
@@ -329,4 +307,20 @@ Genre Match Weight
 This project provides a complete music analysis ecosystem.  
 Users can explore track trends, visualize characteristics, predict popularity, analyze mood and energy, and receive intelligent recommendations.  
 It is professional, modern, interactive, and perfect for academic or portfolio use.
->>>>>>> fb91fbd (Clean streamlit dashboard fix)
+
+---
+
+## 📦 TECHNOLOGIES
+
+Python, Streamlit, Tkinter  
+pandas, numpy, scikit-learn, joblib  
+librosa, nltk, pillow, imagehash  
+UMAP, KMeans  
+
+---
+
+## 📄 MIT LICENSE
+
+This project is released under the MIT License and can be used, modified, or redistributed with proper credit.
+
+---
