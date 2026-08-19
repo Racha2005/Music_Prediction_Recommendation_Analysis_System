@@ -1,5 +1,7 @@
 # 🎵 Music Prediction & Recommendation Analysis System 🎵
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Racha2005/Music_Prediction_Recommendation_Analysis_System)
+
 This project is a complete, end-to-end music intelligence system combining data analytics, professional data visualization, machine-learning predictions, and an interactive recommendation engine.  
 It includes two interfaces — a **Streamlit Dashboard** and a **Tkinter Desktop Application** — both styled with a modern theme to provide a clean and engaging visual experience.
 
